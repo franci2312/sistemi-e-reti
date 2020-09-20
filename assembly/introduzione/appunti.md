@@ -8,7 +8,7 @@ Varie tipologie di istruzioni:
 - Trasferimento dati e I/O (Es. in, out \[comunicazione con il bus I/O])
 - Aritmetico-logiche (Es. xor, add, div)
 - Controllo CPU e miste (Es. hlt \[ferma la CPU], nop \[non fa nulla])
-## ISTRUZIONI E REGISTRI
+## Istruzioni e registri
 Istruzione formata da opcode e parametri (numeri o indirizzi)
 esempio:  (eax è l'indirizzo dell'accumulatore)
 ```
@@ -24,7 +24,7 @@ Esempi di registri speciali:
 (istruzione attuale ~= riga di codice attuale)
 - Accumulatore (Contiene risultato delle operazioni aritmetiche (esempio è EAX su CPU intel/amd a 32 bit))
 - Stack pointer (Contiene puntatore al frame della subroutine (funzione) in esecuzione attuale)
-## LO STACK
+## Lo stack
 Frame composto da variabili locali e indirizzi di ritorno
 (quando viene chiamato ret, la cpu prende l'indirizzo da cui continuare dallo stack))
 (Es. 1A.s)[./es/1A.s]
@@ -33,7 +33,7 @@ e il program counter viene impostato all'indirizzo dell'istruzione "mov eax,0". 
 la CPU esegue un pop dello stack e prende l'indirizzo di ritorno (indirizzo di "mov ebx, eax") e continua
 partendo dall' istruzione "mov ebx, eax".
 è abbastanza simile a questo codice in c (Es. 1B.c)[./es/1B.c]
-## TIPO DI INDIRIZZAMENTO
+## Tipi di indirizzamento
 Vari metodi di indirizzamento:
 - Intrinseco
 	esempio l'istruzione ADD, che aggiunge il parametro all'accumulatore EAX. La CPU sa che la istruzione 05 (opcode di ADD)
