@@ -8,16 +8,15 @@ Varie tipologie di istruzioni:
 - Trasferimento dati e I/O (Es. in, out \[comunicazione con il bus I/O])
 - Aritmetico-logiche (Es. xor, add, div)
 - Controllo CPU e miste (Es. hlt \[ferma la CPU], nop \[non fa nulla])
-
-
-
-# ISTRUZIONI E REGISTRI #
+## ISTRUZIONI E REGISTRI
 Istruzione formata da opcode e parametri (numeri o indirizzi)
 esempio:  (eax è l'indirizzo dell'accumulatore)
+```
 05               09                  (è uguale a)   ADD           eax              ,     9
 opcode di ADD    argomento                          istruzione    registro             numero
 (intel e AMD)   (indirizz. imm.)                                  (ind. intrinseco)
  --------- CODICE MACCHINA ---------               ------------- CODICE ASSEMBLY -------------
+ ```
 Registro = cella di memoria che contiene un numero o info speciali della cpu
 Esempi di registri speciali:
 - FLAGS (contiene dati su stato overflow e altro)
@@ -25,32 +24,16 @@ Esempi di registri speciali:
 (istruzione attuale ~= riga di codice attuale)
 - Accumulatore (Contiene risultato delle operazioni aritmetiche (esempio è EAX su CPU intel/amd a 32 bit))
 - Stack pointer (Contiene puntatore al frame della subroutine (funzione) in esecuzione attuale)
-
-
-
-# LO STACK #
+## LO STACK
 Frame composto da variabili locali e indirizzi di ritorno
 (quando viene chiamato ret, la cpu prende l'indirizzo da cui continuare dallo stack))
-Es.
-pippo:               # Funzione "pippo"
-    mov eax, 0       # Imposta l'accumulatore a 0 (cioè lo azzera in caso un'altra istruzione lo avesse usato)
-    mov eax, 10      # Imposta l'accumulatore a 10
-    add eax, 5       # Aggiunge 5 all'accumulatore      
-    ret              # Ritorna dalla funzione
-
-_start:              # Punto di partenza
-    call pippo       # Chiama "pippo"
-    mov ebx, eax     # Sposta l'accumulatore in ebx (che dovrebbe ora essere 15)
-
+(Es. 1A.s)[./es/1A.s]
 quando "call pippo" viene eseguito, l'indirizzo dell'istruzione "mov ebx, eax" viene pushato sullo stack
 e il program counter viene impostato all'indirizzo dell'istruzione "mov eax,0". Quando viene chiamato "ret"
 la CPU esegue un pop dello stack e prende l'indirizzo di ritorno (indirizzo di "mov ebx, eax") e continua
 partendo dall' istruzione "mov ebx, eax".
-Il codice equivamente in c è disponibile su https://hastebin.com/uvejovisoj.c
-
-
-
-# TIPO DI INDIRIZZAMENTO #
+è abbastanza simile a questo codice in c (Es. 1B.c)[./es/1B.c]
+## TIPO DI INDIRIZZAMENTO
 Vari metodi di indirizzamento:
 - Intrinseco
 	esempio l'istruzione ADD, che aggiunge il parametro all'accumulatore EAX. La CPU sa che la istruzione 05 (opcode di ADD)
@@ -60,5 +43,4 @@ Vari metodi di indirizzamento:
 	(è una costante e non una variabile)
 - Diretto
 	esempio "ebx" in "mov ebx, eax". La CPU prende il valore e lo usa per cercare la relativa locazione in memoria.
-
-#### FRANCESCO MILOVA ####
+###### FRANCESCO MILOVA
