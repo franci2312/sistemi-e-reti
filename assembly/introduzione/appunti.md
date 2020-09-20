@@ -27,12 +27,12 @@ Esempi di registri speciali:
 ## Lo stack
 Frame composto da variabili locali e indirizzi di ritorno
 (quando viene chiamato ret, la cpu prende l'indirizzo da cui continuare dallo stack))
-(Es. 1A.s)[./es/1A.s]
+(Es. 1A.s)[https://github.com/franci2312/sistemi-e-reti/blob/master/assembly/introduzione/es/1A.s]
 quando "call pippo" viene eseguito, l'indirizzo dell'istruzione "mov ebx, eax" viene pushato sullo stack
 e il program counter viene impostato all'indirizzo dell'istruzione "mov eax,0". Quando viene chiamato "ret"
 la CPU esegue un pop dello stack e prende l'indirizzo di ritorno (indirizzo di "mov ebx, eax") e continua
 partendo dall' istruzione "mov ebx, eax".
-è abbastanza simile a questo codice in c (Es. 1B.c)[./es/1B.c]
+è abbastanza simile a questo codice in c (Es. 1B.c)[https://github.com/franci2312/sistemi-e-reti/blob/master/assembly/introduzione/es/1B.c]
 ## Tipi di indirizzamento
 Vari metodi di indirizzamento:
 - Intrinseco
