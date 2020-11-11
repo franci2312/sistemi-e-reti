@@ -50,8 +50,8 @@ L7 = Application Layer
  ```
 
 Fra i programmi standard si menzionano:
-Terminale virtuale = Riga di comando di ISO/OSI compatibile con curses (tty cioé teletype)
-File & Directory Services = Sistema di directory e file da remoto (con upload e download)
-Directory Service = Trova informazioni in un elenco distribuito (Ad esempio un elenco telefonico)
-LDAP = Lightweight directory access Protocol (Sistema di accesso a un Directory Service)
-Mail Services = Consente l'invio e la ricezione di mail
+- Terminale virtuale = Riga di comando di ISO/OSI compatibile con curses (tty cioé teletype)
+- File & Directory Services = Sistema di directory e file da remoto (con upload e download)
+- Directory Service = Trova informazioni in un elenco distribuito (Ad esempio un elenco telefonico)
+- LDAP = Lightweight directory access Protocol (Sistema di accesso a un Directory Service)
+- Mail Services = Consente l'invio e la ricezione di mail
