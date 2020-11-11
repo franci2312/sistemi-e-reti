@@ -1,5 +1,6 @@
 ## Il sistema ISO/OSI
 ISO = International Standards Organization
+Esempio di standard iso: ISO 9660 (Formato storage su CD .iso)
 OSI = Open System Interconnect
 Il sistema ISO/OSI è un'insieme di standard che copre tipi di connessione fisica
 e tipi di comunicazione. Il tutto è suddiviso in 7 livelli, che comunicano con quello
