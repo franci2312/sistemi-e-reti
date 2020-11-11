@@ -55,3 +55,4 @@ Fra i programmi standard si menzionano:
 - Directory Service = Trova informazioni in un elenco distribuito (Ad esempio un elenco telefonico)
 - LDAP = Lightweight directory access Protocol (Sistema di accesso a un Directory Service)
 - Mail Services = Consente l'invio e la ricezione di mail
+###### FRANCESCO MILOVA
