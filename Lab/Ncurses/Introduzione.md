@@ -4,7 +4,7 @@ Ncurses permette di visualizzare a schermo un'interfaccia "grafica", gestendo po
 ### Convenzioni generali di ncurses
 
 #### Init e chiusura ncurses
-Per avviare ncurses bisogna 
+Per avviare ncurses bisogna usare la funzione ```initscr();```, che popola LINES e COLS e avvia ncurses, per terminarlo si usa ```endwin();``` che chiude ncurses e ripristina lo stato dello schermo.
 
 
 #### Formato coordinate
