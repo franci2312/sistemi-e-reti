@@ -1,5 +1,8 @@
 # NCURSES FUNCTION REFERENCE
 > Le funzioni sono divise in vari blocchi.
+
 > Le varianti mv, w e mvw sono solo accennate,
+
 > la convenzione del passaggio dei parametri è
+
 > ([finestra], [y], [x], <argomenti funzione normale>)
