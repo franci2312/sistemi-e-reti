@@ -60,6 +60,14 @@ napms(int time);
 // Mette in pausa il programma per time millisecondi
 // Varianti: No
 ```
+```c
+timeout(int n);
+// Fa in modo che le chiamate a getch() aspettino n millisecondi prima di 
+// ritornare. Se negativo, il programma attende per sempre. Se 0, getch()
+// ritorna ERR in caso l'utente non stia premendo nulla. Se il delay termina
+// e l'utente non ha immesso nulla, ritorna ERR. [ERR è una costante di ncurses]
+// Varianti: No
+```
 
 ### Colori
 ```c
@@ -105,14 +113,26 @@ char getch();
 // Varianti: mv, w, mvw
 ```
 ```c
-getnstr(char* out_string, int max_len);
+getnstr(char *out_string, int max_len);
 // Salva una stringa in out_string con o senza spazi di lunghezza massima max_len
 // Il carattere newline viene rimosso
 // Varianti: mv, w, mvw
 ```
 ```c
-getstr(char* out_string);
+getstr(char *out_string);
 // Salva una stringa di lunghezza illimitata in out_string con o senza spazi
 // Il carattere newline viene rimosso
+// Varianti: mv, w, mvw
+```
+
+### Output
+```c
+printw(char *format, ...);
+// Funziona esattamente come un printf.
+// Varianti: mv, w, mvw
+```
+```c
+addch(char c);
+// Stampa il carattere c a schermo nella posizione del cursore.
 // Varianti: mv, w, mvw
 ```
