@@ -1,10 +1,11 @@
-# NCURSES FUNCTION REFERENCE
+# NCURSES FUNCTION REFERENCE <!-- omit in toc -->
 > Lefunzioni sono divise in vari blocchi.  
 > Le varianti mv, w e mvw sono solo accennate,  
 > la convenzione del passaggio dei parametri è  
 > ([finestra], [y], [x], \<argomenti funzione normale\>)  
+> [vedi introduzione]
 
-## Indice
+## Indice <!-- omit in toc -->
 
 ### Init
 ```c
@@ -89,4 +90,29 @@ bkgd(COLOR_PAIR(n));
 // Imposta i colori della finestra a quelli definiti nello 
 // stile di indice n [v. init_pair]
 // Varianti: w
+```
+### Input
+```c
+int scanw(char *format, ...);
+// è l'equivalente di scanf, ma per ncurses (stesso utilizzo e parametri)
+// Ritorna ERR in caso di errore, altrimenti il numero
+// di variabili impostate
+// Varianti: mv, w, mvw
+```
+```c
+char getch();
+// Ottiene un carattere senza aspettare invio
+// Varianti: mv, w, mvw
+```
+```c
+getnstr(char* out_string, int max_len);
+// Salva una stringa in out_string con o senza spazi di lunghezza massima max_len
+// Il carattere newline viene rimosso
+// Varianti: mv, w, mvw
+```
+```c
+getstr(char* out_string);
+// Salva una stringa di lunghezza illimitata in out_string con o senza spazi
+// Il carattere newline viene rimosso
+// Varianti: mv, w, mvw
 ```
