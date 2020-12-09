@@ -53,7 +53,7 @@ nocbreak();
 ```c
 clear();
 // pulisce lo schermo
-// Varianti: No
+// Varianti: w
 ```
 ```c
 napms(int time);
@@ -135,4 +135,31 @@ printw(char *format, ...);
 addch(char c);
 // Stampa il carattere c a schermo nella posizione del cursore.
 // Varianti: mv, w, mvw
+```
+```c
+refresh();
+// Alcuni comandi possono non essere immediatamente inviati allo schermo
+// quando chiamati. refresh() invia tutti i comandi ancora non stampati a schermo
+// al terminale per stamparli.
+// Varianti: w
+```
+### Finestre
+```c
+WINDOW *win;
+// dichiara (senza inizializzare [vedi sotto]) una finestra chiamata win.
+// Varianti: No
+```
+```c
+win = newwin(int lines, int cols, int y, int x);
+// inizializza win a una finestra con lines righe e cols colonne
+// y e x sono il punto in alto a sinistra occupato dalla finestra
+// Varianti: No
+```
+
+### Bordi
+```c
+box(WINDOW *win, char vertical, char horizontal);
+// Aggiunge un bordo alla finestra (occupa 0,0 della finestra)
+// vertical e horizontal sono i caratteri usati come bordo
+// Varianti: No
 ```
