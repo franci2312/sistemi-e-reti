@@ -3,3 +3,8 @@
 > Le varianti mv, w e mvw sono solo accennate,  
 > la convenzione del passaggio dei parametri è  
 > ([finestra], [y], [x], <argomenti funzione normale>)  
+
+## Indice
+
+### Init
+`initscr();`{:.language-c}
