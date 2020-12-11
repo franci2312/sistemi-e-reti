@@ -166,13 +166,18 @@ delwin(WINDOW *win);
 // Varianti: No
 ```
 ```c
-();
-// 
+wrefresh(WINDOW *win);
+// Aggiorna la finestra (e la sposta se è stato eseguito mvwin)
 // Varianti: No
 ```
 ```c
-();
-// 
+scrollok(WINDOW *win, int value);
+// value agisce come un bool (0,1). a 1 abilita lo scrolling della finestra.
+// Varianti: No
+```
+```c
+werase(WINDOW *win);
+// Pulisce la finestra
 // Varianti: No
 ```
 
@@ -184,7 +189,10 @@ box(WINDOW *win, char vertical, char horizontal);
 // Varianti: No
 ```
 ```c
-();
-// 
+// TODO: #1 FIXME
+WINDOW *win = newwin(10,20,1,1);
+WINDOW *win_border = newwin(12,22,0,0);
+box(win_border,ACS_VLINE,ACS_HLINE);
+// Crea una finestra win 10x20 con bordo esterno in alto a sinistra.
 // Varianti: No
 ```
