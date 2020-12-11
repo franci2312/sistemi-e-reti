@@ -188,11 +188,5 @@ box(WINDOW *win, char vertical, char horizontal);
 // vertical e horizontal sono i caratteri usati come bordo
 // Varianti: No
 ```
-```c
-// TODO: #1 FIXME
-WINDOW *win = newwin(10,20,1,1);
-WINDOW *win_border = newwin(12,22,0,0);
-box(win_border,ACS_VLINE,ACS_HLINE);
-// Crea una finestra win 10x20 con bordo esterno in alto a sinistra.
-// Varianti: No
-```
+
+### Attributi
