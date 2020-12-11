@@ -155,11 +155,36 @@ win = newwin(int lines, int cols, int y, int x);
 // y e x sono il punto in alto a sinistra occupato dalla finestra
 // Varianti: No
 ```
+```c
+mvwin(WINDOW *win, int y, int x);
+// Muove la finestra (x,y è il punto in alto a sinistra nuovo)
+// Varianti: No
+```
+```c
+delwin(WINDOW *win);
+// Elimina la finestra (senza rimuoverla dallo schermo, fare refresh())
+// Varianti: No
+```
+```c
+();
+// 
+// Varianti: No
+```
+```c
+();
+// 
+// Varianti: No
+```
 
 ### Bordi
 ```c
 box(WINDOW *win, char vertical, char horizontal);
 // Aggiunge un bordo alla finestra (occupa 0,0 della finestra)
 // vertical e horizontal sono i caratteri usati come bordo
+// Varianti: No
+```
+```c
+();
+// 
 // Varianti: No
 ```
