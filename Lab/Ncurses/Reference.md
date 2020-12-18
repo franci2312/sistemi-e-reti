@@ -90,13 +90,23 @@ start_color();
 init_pair(short pair, short f, short b);
 // pair è un numero da 1 a 7 che indica l'indice dello stile
 // f e b sono dei colori (COLOR_X) rispettivamente del carattere e dello sfondo
-// Per applicare i colori guardare la sezione attributi
+// Per applicare i colori guardare attron e attroff
 // Varianti: No
 ```
 ```c
 bkgd(COLOR_PAIR(n));
 // Imposta i colori della finestra a quelli definiti nello 
 // stile di indice n [v. init_pair]
+// Varianti: w
+```
+```c
+attron(COLOR_PAIR(n));
+// Imposta come attivo il color pair a n
+// Varianti: w
+```
+```c
+attron(COLOR_PAIR(n));
+// Disabilita il color pair n
 // Varianti: w
 ```
 ### Input
