@@ -6,7 +6,14 @@
 > [vedi introduzione]
 
 ## Indice <!-- omit in toc -->
-
+- [Init](#init)
+- [Cursore](#cursore)
+- [Utils](#utils)
+- [Colori](#colori)
+- [Input](#input)
+- [Output](#output)
+- [Finestre](#finestre)
+- [Bordi](#bordi)
 ### Init
 ```c
 initscr();
