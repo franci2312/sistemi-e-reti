@@ -90,13 +90,23 @@ start_color();
 init_pair(short pair, short f, short b);
 // pair è un numero da 1 a 7 che indica l'indice dello stile
 // f e b sono dei colori (COLOR_X) rispettivamente del carattere e dello sfondo
-// Per applicare i colori guardare la sezione attributi
+// Per applicare i colori guardare attron e attroff
 // Varianti: No
 ```
 ```c
 bkgd(COLOR_PAIR(n));
 // Imposta i colori della finestra a quelli definiti nello 
 // stile di indice n [v. init_pair]
+// Varianti: w
+```
+```c
+attron(COLOR_PAIR(n));
+// Imposta come attivo il color pair a n
+// Varianti: w
+```
+```c
+attroff(COLOR_PAIR(n));
+// Disabilita il color pair n
 // Varianti: w
 ```
 ### Input
@@ -188,5 +198,11 @@ box(WINDOW *win, char vertical, char horizontal);
 // vertical e horizontal sono i caratteri usati come bordo
 // Varianti: No
 ```
-
-### Attributi
+```c
+// TODO: #1 FIXME
+WINDOW *win = newwin(10,20,1,1);
+WINDOW *win_border = newwin(12,22,0,0);
+box(win_border,ACS_VLINE,ACS_HLINE);
+// Crea una finestra win 10x20 con bordo esterno in alto a sinistra.
+// Varianti: No
+```
