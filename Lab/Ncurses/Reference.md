@@ -105,7 +105,7 @@ attron(COLOR_PAIR(n));
 // Varianti: w
 ```
 ```c
-attron(COLOR_PAIR(n));
+attroff(COLOR_PAIR(n));
 // Disabilita il color pair n
 // Varianti: w
 ```
